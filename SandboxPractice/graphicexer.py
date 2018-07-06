@@ -23,4 +23,4 @@ class GraphicExer():
 
     def DrawVertical(self):
         print('|   ' * self.col, end="")
-        print('|')
+        print('|') 
