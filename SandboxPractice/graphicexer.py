@@ -13,13 +13,14 @@ class GraphicExer():
 
     def Draw(self): #add 'self' as params on class methods
         for i in range(self.row):
-            for j in range(self.col):
-                print('+---', end="")
-            print('+')
-            for h in range(self.col):
-                print('|   ', end="")
-            print('|')
-        for i in range(self.col):
-                print('+---', end="")
+            self.DrawHorizontal()
+            self.DrawVertical()
+        self.DrawHorizontal()
+
+    def DrawHorizontal(self):
+        print('+---' * self.col, end="")
         print('+')
-            
+
+    def DrawVertical(self):
+        print('|   ' * self.col, end="")
+        print('|')
