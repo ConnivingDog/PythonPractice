@@ -4,6 +4,7 @@ import os
 import sys
 import time
 from practice import Practice
+from graphicexer import GraphicExer
 
 #Odd or Even Guesser
 def OddEven():
@@ -25,7 +26,6 @@ def Swapper():
 
 #Sum of Digits
 def SumOfDigits():
-
     x = input("enter a number : ")
 
     print('sum : {}'.format(Practice.SumOfDigits(x)))
@@ -33,10 +33,15 @@ def SumOfDigits():
 
 #Reverser
 def NumberReverse():
-
     x = input("enter a number : ")
 
     print('Reversed number : {}'.format(Practice.Reverser(x)))
+
+def Draw():
+    x = int(input("Enter number of row : "))
+    y = int(input("Enter number of column : "))
+    graphicExer = GraphicExer(x,y)
+    graphicExer.Draw()
 
 #Determines wich method to run
 def Selector(Activity):
@@ -48,6 +53,8 @@ def Selector(Activity):
         SumOfDigits()
     elif Activity == 4:
         NumberReverse()
+    elif Activity == 5:
+        Draw()
     else:
         os.system('cls')
         quit()
@@ -58,7 +65,8 @@ def PrintMenu():
     print('[2]. Swapper')
     print('[3]. Sum of Digits')
     print('[4]. Number Reverse')
-    print('[5]. Exit\n')
+    print('[5]. Draw')
+    print('[6]. Exit\n')
 
 def main():
     os.system('cls')
